@@ -1,8 +1,6 @@
 ### Problem statement:
 
-To accurately classify customer churn for each client by leveraging tree-based models such as random forest and Extreme Gradient Boosting (XGB).
-
-
+To accurately classify customer churn for each client by leveraging tree-based models such as random forest and Extreme Gradient Boosting (XGB). </br></br>
 
 ### EDA and Data Pre-processing steps taken:
 
@@ -30,8 +28,7 @@ To accurately classify customer churn for each client by leveraging tree-based m
 
 2. In the second version (final_df), all the numerical columns are checked for multi-collinearity. Models such as XGB deal with multi-collinearity pretty well but this step was carried to check for accuracies across different iterations of pre-processed data. Columns with VIF > 5 (Variance inflation factor –checks how much a predictor variable is correlated with all other predictor variables) are eliminated from the dataset. VIF is only calculated for top 30 highly correlated features.
 
-3. A third version that is unaffected by above two steps is also fed into the models. The top 30 highly correlated features are only selected in this case for prediction.
-
+3. A third version that is unaffected by above two steps is also fed into the models. The top 30 highly correlated features are only selected in this case for prediction. </br></br>
 
 
 ### Model Training and Evaluation:
@@ -48,7 +45,7 @@ To accurately classify customer churn for each client by leveraging tree-based m
 
 → Confusion matrices are plotted for the best models to understand proportions of True negatives to True positives along with other combinations.
 
-![image](https://github.com/user-attachments/assets/35bcc2ae-8711-4d96-8e7f-ce7ffd774a05)
+![image](https://github.com/user-attachments/assets/35bcc2ae-8711-4d96-8e7f-ce7ffd774a05) </br></br>
 
 
 
@@ -66,7 +63,7 @@ Subsample → Each tree will be assigned random subsets of the data. For eg, eac
 
 Colsample_bytree → Similar to subsample, a certain percentage of the features can be chosen randomly for training each tree. This can help the model to generalize well with unseen data.
 
-Alpha, lambda and gamma → Used for performing L1 Regularization, L2 Regularization and loss reduction. These regularization parameters are used to dynamically change coefficient weights to prevent overfitting whereas loss reduction is used to make sure that a split takes place only if minimal error (or loss) is achieved.
+Alpha, lambda and gamma → Used for performing L1 Regularization, L2 Regularization and loss reduction. These regularization parameters are used to dynamically change coefficient weights to prevent overfitting whereas loss reduction is used to make sure that a split takes place only if minimal error (or loss) is achieved. </br></br>
 
 
 
@@ -76,8 +73,7 @@ Alpha, lambda and gamma → Used for performing L1 Regularization, L2 Regulariza
 
 ✓ An highly accurate test score was difficult to achieve. Hyperparameter tuning did not turn out to be efficient.
 
-✓ Different pre-processing steps had to be taken for the dataset to figure out model with best accuracy.
-
+✓ Different pre-processing steps had to be taken for the dataset to figure out model with best accuracy. </br></br>
 
 
 ### Key library methods in use →
